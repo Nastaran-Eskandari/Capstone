@@ -15,8 +15,8 @@ class App extends Component {
           <div>
             <Header/>
           <Switch>
-            <Route exact path="/" component={Main} />
-            <Route exact path="/comments/:tag_name"  render={(props) => <Main tag={props.match.params.tag_name} /> } />
+            <Route path="/"  exact component={Main} />
+            <Route path="/comments/:tag_name"  exact render={(props) => <Main tag={props.match.params.tag_name} /> } />
           </Switch>
           </div>
         </Router>  
